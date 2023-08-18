@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block menu %}
+{% include "menu.html" %}
+{% endblock %}
+
+{% block contenido %}
+<div class="video-gallery">
+  {% for video in videos %}
+    <div class="video-container">
+      <video class="custom-video" controls autoplay muted>
+        <source src="{{ video.video_file.url }}" type="video/mp4">
+        Tu navegador no admite la reproducción de videos.
+      </video>
+      <h3>{{ video.title }}</h3>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+{% block piePagina %}
+{% include "piePagina.html" %}
+{% endblock %}

@@ -1,0 +1,398 @@
+
+{% extends "index.html" %}
+{% block menu %}
+{% include "menu.html" %}
+{%endblock %}
+{% block contenido %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+<!--cartas Fila 1-->
+
+    <section style="justify-content: space-evenly; display: flex; margin: 0 auto; width: 800px;">
+      <div class="card" style="margin-right: 10px;" >
+        <div class="content">
+          <div class="back1">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Jett.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Jett</strong>
+            </div>
+          </div>
+          <div class="front">
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Jett</small>
+              
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong class="text-center">// ROL
+                      DUELISTA <br><img src="{% static 'roles/Duelista.png' %}" alt=""  height="30" ><br><br><br>//HABILIDADES <br><br> <img src="{% static 'roles/vendeval.png' %}" alt=""  height="30" > <img src="{% static 'roles/dash.png' %}" alt=""  height="30" > <img src="{% static 'roles/humoJett.png' %}" alt=""  height="30" > <img src="{% static 'roles/ultiJett.png' %}" alt=""  height="30" ></strong>
+                      
+                    </p>
+                    <p>
+                  // BIOGRAFÍA<br>
+                   Jett viene de Corea del Sur, y su estilo de lucha ágil y evasivo le permite asumir grandes riesgos. Corre y salta de aquí para allá en las refriegas y hace trizas a los enemigos con una rapidez espectacular.
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997">
+                    
+                    <g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                    
+                </div>
+              </p>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back2">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Astra.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Astra</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Astra</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back3">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Breach.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Breach</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Breach</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+<!--cartas Fila 2-->
+    <section style="justify-content: space-evenly; display: flex; margin: 0 auto; width: 800px;">
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back4">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Brimstone.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Brimstone</strong>
+            </div>
+          </div>
+          <div class="front">
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Brimstone</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back5">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Gekko.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Gekko</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Gekko</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back6">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Fade.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Fade</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Fade</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!--cartas Fila 3-->
+    <section style="justify-content: space-evenly; display: flex; margin: 0 auto; width: 800px;">
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back7">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Reyna.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Reyna</strong>
+            </div>
+          </div>
+          <div class="front">
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Reyna</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back8">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Chamber.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Chamber</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Chamber</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" style="margin-right: 10px;">
+        <div class="content">
+          <div class="back9">
+            <div class="back-content">
+              <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calculamos la posición vertical para centrar la imagen -->
+                <image xlink:href="{% static 'media/Deadlock.png' %}" width="130" height="400" y="-100"  x="40" />
+              </svg>
+                <strong>Deadlock</strong>
+            </div>
+          </div>
+          <div class="front">
+            
+            <div class="img">
+              <div class="circle">
+              </div>
+              <div class="circle" id="right">
+              </div>
+              <div class="circle" id="bottom">
+              </div>
+            </div>
+      
+            <div class="front-content">
+              <small class="badge">Deadlock</small>
+              <div class="description">
+                <div class="title">
+                  <p class="title">
+                    <strong>Spaguetti Bolognese</strong>
+                  </p>
+                  <svg fill-rule="nonzero" height="15px" width="15px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                </div>
+                <p class="card-footer">
+                  30 Mins &nbsp; | &nbsp; 1 Serving
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    
+
+    
+    {%endblock %}
+    {% block piePagina %}
+    {% include "piePagina.html" %}
+    {%endblock %}
