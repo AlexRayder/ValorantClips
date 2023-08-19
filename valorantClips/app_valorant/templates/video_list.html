@@ -1,55 +1,101 @@
-{% extends "index.html" %}
-{% block menu %}
-{% include "menu.html" %}
-{% endblock %}
-
-{% block contenido %}
-<div class="video-gallery">
-  {% for video in videos %}
-    <div class="video-container">
-      <video class="custom-video" controls autoplay>
-        <source src="{{ video.video_file.url }}" type="video/mp4">
-        Tu navegador no admite la reproducción de videos.
-      </video>
-      <h3>{{ video.title }}</h3>
-      <form class="delete-form" data-video-id="{{ video.id }}" method="post" action="{% url 'delete_video' video.id %}">
-        {% csrf_token %}
-        <button type="button" class="delete-button">Eliminar</button>
-    </form>
-    
-    </div>
-  {% endfor %}
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const deleteForms = document.querySelectorAll('.delete-form');
+  {% extends "index.html" %}
+  {% block menu %}
+  {% include "menu.html" %}
+  {% endblock %}
+  {% block contenido %}
+  <div class="video-gallery">
+    <table id="video-table" class="display">
+      <thead>
+        <tr>
+          <th>Video</th>
+          <th>Nombre</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for video in videos %}
+          <tr>
+            <td>
+              {% if video.thumbnail %}
+                <img src="{{ video.thumbnail.url }}" height="100" width="200" alt="{{ video.title }}" class="video-thumbnail">
+              {% else %}
+                <p>No thumbnail available</p>
+              {% endif %}
+            </td>
+            <td>{{ video.title }}</td>
+            <td>
+              <form class="delete-form" data-video-id="{{ video.id }}" method="post" action="{% url 'delete_video' video.id %}">
+                {% csrf_token %}
+                <button type="submit" class="delete-button">Eliminar</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      
+    </table>
+  </div>
   
-  deleteForms.forEach(form => {
-    const videoId = form.getAttribute('data-video-id');
-    const deleteButton = form.querySelector('.delete-button');
-    
-    deleteButton.addEventListener('click', function() {
+  {% if mensaje %}
+  {% if estado %}
+  <script>
       Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+          title: 'Elimacion De Video',
+          text: '{{mensaje}}',
+          icon: 'success',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Aceptar'
       }).then((result) => {
-        if (result.isConfirmed) {
-          form.submit();
-        }
+          if (result.isConfirmed) {
+              location.href = "/video_list/"
+          }
+      });
+  </script>
+  {% else %}
+  <script>
+      Swal.fire({
+          title: 'Elimacion De Video',
+          text: '{{mensaje}}',
+          icon: 'error',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Aceptar'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              location.href = "/video_list/"
+          }
+      });
+  </script>
+  {% endif %}
+  {% endif %}
+
+
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      const videoTable = $('#video-table').DataTable();
+      
+      $('.delete-form').on('submit', function(event) {
+        event.preventDefault();
+        const form = $(this);
+        const videoId = form.data('video-id');
+        
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            form.off('submit').submit();
+          }
+        });
       });
     });
-  });
-});
-</script>
-{% endblock %}
-
-{% block piePagina %}
-{% include "piePagina.html" %}
-{% endblock %}
+  </script>
+  {% endblock %}
+  {% block piePagina %}
+  {% include "piePagina.html" %}
+  {% endblock %}

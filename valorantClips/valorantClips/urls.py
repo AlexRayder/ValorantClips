@@ -26,9 +26,8 @@ urlpatterns = [
     path('personajes/', views.personajes, name='personajes'),
     path('subirVideo/', views.subir_video, name ='subirVideo'),
     path('mostrar_videos/', views.mostrar_videos, name='mostrar_videos'),
-    path('video/list/', views.video_list, name='video_list'),
-    path('video/<int:video_id>/delete/', views.delete_video, name='delete_video'),
-    
+    path('video_list/', views.video_list, name='video_list'),
+    path('video/<int:video_id>/', views.delete_video, name='delete_video'),
     
 ]
 if settings.DEBUG:
