@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', views.login, name='login'),
     path('', views.inicio, name='inicio'), # Ruta para la vista inicio
     path('personajes/', views.personajes, name='personajes'),
     path('subirVideo/', views.subir_video, name ='subirVideo'),

@@ -14,37 +14,3 @@
 {% include "piePagina.html" %}
 {% endblock %}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const uploadForm = document.getElementById('upload-form');
-
-  uploadForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el comportamiento de envío por defecto
-
-    // Mostrar mensaje de carga
-    Swal.fire({
-      title: 'Subiendo Video...',
-      icon: 'info',
-      showConfirmButton: false,
-      allowOutsideClick: false
-    });
-
-    // Simular una carga o procesamiento (puede ser opcional)
-    setTimeout(() => {
-      Swal.close();
-      // Mostrar alerta de éxito si existe mensaje y estado
-      {% if mensaje %}
-      {% if estado %}
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: '{{ mensaje }}',
-        showConfirmButton: false,
-        timer: 1500
-      });
-      {% endif %}
-      {% endif %}
-    }, 20); // Simulación de tiempo de carga, puedes ajustarlo según tu necesidad
-  });
-});
-</script>

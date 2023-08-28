@@ -26,7 +26,7 @@
             <td>
               <form class="delete-form" data-video-id="{{ video.id }}" method="post" action="{% url 'delete_video' video.id %}">
                 {% csrf_token %}
-                <button type="submit" class="delete-button">Eliminar</button>
+                <button type="submit" class="delete-button btn btn-danger">Eliminar</button>
               </form>
             </td>
           </tr>

@@ -10,14 +10,16 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 from moviepy.editor import *
 
 
-# ... (otras importaciones y código) ...
 
 
 
-
+def login(request):
+    return render(request, 'login.html')
 
 def inicio(request):
     return render(request, 'inicio.html')
+
+
 
 def personajes(request):
     return render(request, 'personajes.html')
