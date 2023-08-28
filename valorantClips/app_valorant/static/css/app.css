@@ -7,53 +7,65 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/*Video */
-.video-container{
-display: grid;
-place-items: center;
+/** Section */
+section {
+  min-height: 80vh;
+  background-color: #f0f0f0;
 }
 
-.videoUser{
+/*Video */
+.video-container {
+  display: grid;
+  place-items: center;
+}
+
+.videoUser {
   text-align: center;
 }
 
 
 
 /*:::::Pie de Pagina*/
-.pie-pagina{
+.pie-pagina {
   width: 100%;
   background-color: #0a141d;
-  
+
 }
-.pie-pagina .grupo-1{
+
+.pie-pagina .grupo-1 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap:50px;
+  grid-gap: 50px;
   padding: 45px 0px;
 }
-.pie-pagina .grupo-1 .box figure{
+
+.pie-pagina .grupo-1 .box figure {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.pie-pagina .grupo-1 .box figure img{
+
+.pie-pagina .grupo-1 .box figure img {
   width: 250px;
 }
-.pie-pagina .grupo-1 .box h2{
+
+.pie-pagina .grupo-1 .box h2 {
   color: #fff;
   margin-bottom: 25px;
   font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p{
+
+.pie-pagina .grupo-1 .box p {
   color: #efefef;
   margin-bottom: 10px;
 }
-.pie-pagina .grupo-1 .red-social a{
+
+.pie-pagina .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
   width: 45px;
@@ -65,24 +77,28 @@ place-items: center;
   text-align: center;
   transition: all 300ms ease;
 }
-.pie-pagina .grupo-1 .red-social a:hover{
+
+.pie-pagina .grupo-1 .red-social a:hover {
   color: aqua;
 }
-.pie-pagina .grupo-2{
+
+.pie-pagina .grupo-2 {
   background-color: #0a1a2a;
   padding: 15px 10px;
   text-align: center;
   color: #fff;
 }
-.pie-pagina .grupo-2 small{
+
+.pie-pagina .grupo-2 small {
   font-size: 15px;
 }
-@media screen and (max-width:800px){
-  .pie-pagina .grupo-1{
-      width: 90%;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap:30px;
-      padding: 35px 0px;
+
+@media screen and (max-width:800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
   }
 }
 
@@ -104,10 +120,11 @@ place-items: center;
   transition: transform 300ms;
   box-shadow: 0px 0px 10px 1px #000000ee;
   border-radius: 5px;
-  
+
 }
 
-.front, .back {
+.front,
+.back {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -269,7 +286,8 @@ place-items: center;
 
 
 /*Este codigo sire paa cambiar los colores de los bordes*/
-.front, .back1 {
+.front,
+.back1 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -295,13 +313,14 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, 	#e9f4f7, #73f5ed, 	#77d4e4, #435680,	#0b0e22, transparent);
+  background: linear-gradient(90deg, transparent, #e9f4f7, #73f5ed, #77d4e4, #435680, #0b0e22, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 
-.front, .back2 {
+.front,
+.back2 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -327,14 +346,15 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #fffcc4, #cb33b2, #9440c1, #7013e4,#292359, transparent);
+  background: linear-gradient(90deg, transparent, #fffcc4, #cb33b2, #9440c1, #7013e4, #292359, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 
 
-.front, .back3 {
+.front,
+.back3 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -360,12 +380,13 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #fff682, #ca5826, #6c3318, 	#3e4540, #0e0a0a, transparent);
+  background: linear-gradient(90deg, transparent, #fff682, #ca5826, #6c3318, #3e4540, #0e0a0a, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
-.front, .back4 {
+.front,
+.back4 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -391,13 +412,14 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #f08a33, #3d1006, #687c94, 	#aabcd1, #fcc423, transparent);
+  background: linear-gradient(90deg, transparent, #f08a33, #3d1006, #687c94, #aabcd1, #fcc423, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 
-.front, .back5 {
+.front,
+.back5 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -423,12 +445,13 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #40f100, #5658ff, #9adeff, 		#ffe100, #c400ff, transparent);
+  background: linear-gradient(90deg, transparent, #40f100, #5658ff, #9adeff, #ffe100, #c400ff, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
-.front, .back6 {
+.front,
+.back6 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -454,14 +477,15 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #cabac0, #517baf, #a83c49,#4a5f80, #2d3d59, transparent);
+  background: linear-gradient(90deg, transparent, #cabac0, #517baf, #a83c49, #4a5f80, #2d3d59, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 
 
-.front, .back7 {
+.front,
+.back7 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -487,12 +511,13 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent,#fe66f0, #c55bfc, 	#983586,	#725745, 	#201b2b, transparent);
+  background: linear-gradient(90deg, transparent, #fe66f0, #c55bfc, #983586, #725745, #201b2b, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
-.front, .back8 {
+.front,
+.back8 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -518,13 +543,14 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent,#ffd700, 	#7c2e71, 	#c93d7b,	#265882, 	#675445, transparent);
+  background: linear-gradient(90deg, transparent, #ffd700, #7c2e71, #c93d7b, #265882, #675445, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 
-.front, .back9 {
+.front,
+.back9 {
   background-color: #151515;
   position: absolute;
   width: 100%;
@@ -550,16 +576,15 @@ place-items: center;
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent,#796E64, 	#355A4B, 	#CFC4CA,	#62B1FF, 	#0D0D0D, transparent);
+  background: linear-gradient(90deg, transparent, #796E64, #355A4B, #CFC4CA, #62B1FF, #0D0D0D, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
 
 /* Estilos para la clase "title" que contiene las imágenes y el texto */
 
-.vide{
+.vide {
   display: grid;
   justify-content: center;
   align-items: center;
 }
-

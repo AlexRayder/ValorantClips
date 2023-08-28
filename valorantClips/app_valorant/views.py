@@ -50,20 +50,22 @@ def generate_thumbnail(video_file):
 # ...
 
 def subir_video(request):
+    estado=False
+    mensaje=""
     if request.method == 'POST':
         form = VideoForm(request.POST, request.FILES)
         if form.is_valid():
             video = form.save(commit=False)
             video.save()
-
+            estado=True
+            mensaje="Video agregado correctamente"
             # Generar y guardar la miniatura
             video_thumbnail = generate_thumbnail(video.video_file)
-            video.thumbnail.save(video.title + '_thumbnail.jpg', video_thumbnail, save=True)  # Asegúrate de que la miniatura se guarda en el modelo Video
-            
-            return redirect('subirVideo')
+            video.thumbnail.save(video.title + '_thumbnail.jpg', video_thumbnail, save=True)  # Asegúrate de que la miniatura se guarda en el modelo Video     
     else:
         form = VideoForm()
-    return render(request, 'subirVideo.html', {'form': form})
+    retorno={"estado":estado,"mensaje":mensaje,"form":form}    
+    return render(request, 'subirVideo.html',retorno)
 
 
 def mostrar_videos(request):
@@ -84,11 +86,13 @@ def delete_video(request, video_id):
     try:
         video = Video.objects.get(id=video_id)
         archivo = video.video_file.path
+        foto = video.thumbnail.path
         video.delete()
         
         # Eliminar el archivo físico
         if os.path.exists(archivo):
             os.remove(archivo)
+            os.remove(foto)
             
             # También puedes eliminar el directorio vacío si lo deseas
             # os.path.dirname(archivo) obtiene la carpeta del archivo
